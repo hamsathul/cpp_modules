@@ -6,7 +6,7 @@
 /*   By: hkunnam- <hkunnam-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 20:34:44 by hkunnam-          #+#    #+#             */
-/*   Updated: 2023/11/12 13:44:31 by hkunnam-         ###   ########.fr       */
+/*   Updated: 2023/11/13 12:11:56 by hkunnam-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,20 +64,48 @@ int main(void)
 			}
 				
 				std::cout << "PLEASE ENTER THE FIRST NAME" << std::endl;
-				std::cin >> Phone.Contacts[Phone.counter].First_Name;
+				std::cin >> std::ws;
+				std::getline(std::cin, Phone.Contacts[Phone.counter].First_Name);
+				while (Phone.Contacts[Phone.counter].First_Name.empty()) {
+					std::cout << "Invalid input! Please enter a non-empty value for First Name." << std::endl;
+					std::getline(std::cin, Phone.Contacts[Phone.counter].First_Name);
+				}
 				system("clear");
-				std::cout << "PLEASE ENTER THE LAST NAME" << std::endl;
-				std::cin >> Phone.Contacts[Phone.counter].Last_Name;				
-				system("clear");
-				std::cout << "PLEASE ENTER THE NICKNAME" << std::endl;
-				std::cin >> Phone.Contacts[Phone.counter].Nickname;				
-				system("clear");
-				std::cout << "PLEASE ENTER THE PHONE NUMBER" << std::endl;
-				std::cin >> Phone.Contacts[Phone.counter].Phone_Number;				
-				system("clear");
-				std::cout << "PLEASE ENTER THE DARKEST SECRET" << std::endl;
-				std::cin >> Phone.Contacts[Phone.counter].Darkest_Secret;
 				
+				std::cout << "PLEASE ENTER THE LAST NAME" << std::endl;
+				std::cin >> std::ws;
+				std::getline(std::cin, Phone.Contacts[Phone.counter].Last_Name);
+				while (Phone.Contacts[Phone.counter].Last_Name.empty()) {
+					std::cout << "Invalid input! Please enter a non-empty value for Last Name." << std::endl;
+					std::getline(std::cin, Phone.Contacts[Phone.counter].Last_Name);
+				}
+				system("clear");
+				
+				std::cout << "PLEASE ENTER THE NICKNAME" << std::endl;
+				std::cin >> std::ws;
+				std::getline(std::cin, Phone.Contacts[Phone.counter].Nickname);
+				while (Phone.Contacts[Phone.counter].Nickname.empty()) {
+					std::cout << "Invalid input! Please enter a non-empty value for Nick Name." << std::endl;
+					std::getline(std::cin, Phone.Contacts[Phone.counter].Nickname);
+				}				
+				system("clear");
+
+				std::cout << "PLEASE ENTER THE PHONE NUMBER" << std::endl;
+				std::cin >> std::ws;
+				std::getline(std::cin, Phone.Contacts[Phone.counter].Phone_Number);	
+				while (Phone.Contacts[Phone.counter].Phone_Number.empty()) {
+					std::cout << "Invalid input! Please enter a non-empty value for Phone Number." << std::endl;
+					std::getline(std::cin, Phone.Contacts[Phone.counter].Phone_Number);
+				}				
+				system("clear");
+
+				std::cout << "PLEASE ENTER THE DARKEST SECRET" << std::endl;
+				std::cin >> std::ws;
+				std::getline(std::cin, Phone.Contacts[Phone.counter].Darkest_Secret);
+				while (Phone.Contacts[Phone.counter].Darkest_Secret.empty()) {
+					std::cout << "Invalid input! Please enter a non-empty value for Darkest Secret." << std::endl;
+					std::getline(std::cin, Phone.Contacts[Phone.counter].Darkest_Secret);
+				}				
 			Phone.counter++;			
 		}
 		else if (command == "2" || command == "SEARCH")
