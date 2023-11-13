@@ -6,7 +6,7 @@
 /*   By: hkunnam- <hkunnam-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 13:35:53 by hkunnam-          #+#    #+#             */
-/*   Updated: 2023/11/10 19:22:56 by hkunnam-         ###   ########.fr       */
+/*   Updated: 2023/11/13 17:44:26 by hkunnam-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class HumanA
 	private:
 
 	std::string _name;
-	Weapon _weapon;
+	Weapon& _weapon;
 		
 	public:
 		HumanA(std::string name, Weapon &Weapon);
