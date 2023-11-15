@@ -2,14 +2,13 @@ NAME = nowwearetalking
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 SRC = main.cpp Fixed.cpp
-INCLUDES = FixedJ.hpp
 
 OBJ = ${SRC:%.cpp=%.o}
 
 all: ${NAME}
 
 ${NAME}:${OBJ}
-		${CC} ${CXXFLAGS} -I ${INCLUDES} ${OBJ} -o $(NAME)
+		${CC} ${CXXFLAGS} ${OBJ} -o $(NAME)
 
 fclean: clean
 		@rm -rf ${NAME}

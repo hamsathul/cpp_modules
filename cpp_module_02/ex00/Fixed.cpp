@@ -6,12 +6,11 @@
 /*   By: hkunnam- <hkunnam-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 19:40:19 by hkunnam-          #+#    #+#             */
-/*   Updated: 2023/11/14 19:40:19 by hkunnam-         ###   ########.fr       */
+/*   Updated: 2023/11/15 11:38:56 by hkunnam-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
 #include <iostream>
 
 Fixed::Fixed() :_RawBits(0)
@@ -34,7 +33,6 @@ Fixed &Fixed::operator=(const Fixed &overload)
 	std::cout << "Copy assignment operator called "<< std::endl;
 	this->setRawBits(overload.getRawBits());
 	return (*this);
-
 }
 
 int Fixed::getRawBits(void) const
