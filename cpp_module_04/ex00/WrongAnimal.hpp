@@ -30,8 +30,8 @@ class WrongAnimal
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal &copy);
 		WrongAnimal &operator=(const WrongAnimal &overload);
-		virtual ~WrongAnimal();
+		~WrongAnimal();
 
 		std::string getType() const;
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 };
