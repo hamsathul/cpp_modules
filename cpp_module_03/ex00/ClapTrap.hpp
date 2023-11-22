@@ -6,12 +6,12 @@
 /*   By: hkunnam- <hkunnam-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 18:40:29 by hkunnam-          #+#    #+#             */
-/*   Updated: 2023/11/19 18:40:29 by hkunnam-         ###   ########.fr       */
+/*   Updated: 2023/11/21 13:13:38 by hkunnam-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
-#define CLPTRAP_HPP
+#define CLAPTRAP_HPP
 
 #include <iostream>
 
