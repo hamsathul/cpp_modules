@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkunnam- <hkunnam-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 22:36:22 by hkunnam-          #+#    #+#             */
-/*   Updated: 2024/01/16 22:36:22 by hkunnam-         ###   ########.fr       */
+/*   Created: 2024/01/20 22:53:05 by hkunnam-          #+#    #+#             */
+/*   Updated: 2024/01/20 22:53:05 by hkunnam-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALARCONVERTER_HPP
-#define SCALARCONVERTER_HPP
+#ifndef SERIALIZER_HPP
+#define SERIALIZER_HPP
 
 #include <iostream>
-#include <iomanip>
-#include <climits>
-#include <cfloat>
-#include <stdlib.h>
+#include <stdint.h> 
 
 # define CYAN "\e[36m"
 # define MAGENTA "\e[35m"
@@ -27,17 +24,25 @@
 # define RED "\e[31m"
 # define RESET "\e[0m"
 
-class ScalarConverter
+
+struct Data 
 {
-	public:
-		static void convert(std::string &str);
+	int id;
+	std::string name;
+};
 
+class Serializer
+{
 	private:
-		ScalarConverter();
-		ScalarConverter(const ScalarConverter &copy);
-		~ScalarConverter();
+		Serializer();
+		Serializer(Serializer &copy);
+		~Serializer();
 
-		ScalarConverter &operator=(ScalarConverter overload);	
+		Serializer &operator=(const Serializer &overload);
+
+		public:
+			static uintptr_t serialize(Data* ptr);
+			static Data* deserialize(uintptr_t raw);
 
 };
 

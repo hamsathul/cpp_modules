@@ -1,7 +1,7 @@
-NAME = scalarconverter
+NAME = identify
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
-SRC = main.cpp ScalarConverter.cpp
+SRC = main.cpp Base.cpp
 
 OBJ = ${SRC:%.cpp=%.o}
 

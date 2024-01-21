@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkunnam- <hkunnam-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 22:36:35 by hkunnam-          #+#    #+#             */
-/*   Updated: 2024/01/16 22:36:35 by hkunnam-         ###   ########.fr       */
+/*   Created: 2024/01/21 12:05:27 by hkunnam-          #+#    #+#             */
+/*   Updated: 2024/01/21 12:05:27 by hkunnam-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef BASE_HPP
+#define BASE_HPP
 
-int main(int ac, char **av)
+
+# define CYAN "\e[36m"
+# define MAGENTA "\e[35m"
+# define BLUE "\e[34m"
+# define GREEN "\e[32m"
+# define YELLOW "\e[33m"
+# define RED "\e[31m"
+# define RESET "\e[0m"
+
+
+class Base
 {
-	if (ac != 2)
-	{
-		std::cout << RED << "Error\nThe program should have only 1 argument." << RESET << std::endl;
-		return 1;
-	}
 
-	if (av[1][0] == '\0')
-	{
-		std::cout << RED << "Error\nThe arguments should not be empty" << RESET << std::endl;
-		return 1;
-	}
+public:
+	virtual ~Base(void);
+};
 
-	std::string str(av[1]);
-	ScalarConverter::convert(str);
-	return 0;
-}
+
+#endif
