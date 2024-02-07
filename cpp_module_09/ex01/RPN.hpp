@@ -25,6 +25,7 @@
 #include <sstream>
 #include <stack>
 #include <cstdlib>
+#include <climits>
 class RPN
 {
 	private:
@@ -37,8 +38,8 @@ class RPN
 		RPN &operator=(const RPN &other);
 		~RPN();
 
-		void evaluateExpression(const std::string &expr);
-		void printResult(std::ostream &out);
+		int evaluateExpression(const std::string &expr);
+		int printResult(std::ostream &out);
 };
 
 #endif

@@ -23,7 +23,12 @@ int main(int ac, char **av)
 	RPN rpnCalc;
 	std::string rpnExp = av[1];
 
-	rpnCalc.evaluateExpression(rpnExp);
+	if(rpnCalc.evaluateExpression(rpnExp) !=0 )
+	{
+		rpnCalc.~RPN();
+		exit(EXIT_FAILURE);
+	}
+		
 	rpnCalc.printResult(std::cout);
 
 	return 0;
